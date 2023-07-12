@@ -17,6 +17,9 @@ spec:
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
+    - Validate=false
+    - PrunePropagationPolicy=foreground 
+    - PruneLast=true 
 
     automated: # polls from the Git repo every 3 mins by default
       selfHeal: true # by default changes made to the cluster manually will not trigger sync, adding selfHeal enables auto sync
