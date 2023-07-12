@@ -3,8 +3,6 @@ kind: ConfigMap
 metadata:
   name: game-config
   namespace: spike
-  resourceVersion: "516"
-  uid: b4952dc3-d670-11e5-8cd0-68f728db1985
 data:
   database: mongodb
   database_uri: mongodb://localhost:27017    
