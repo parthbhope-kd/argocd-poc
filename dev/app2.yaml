@@ -1,22 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: spike-poc-argo-application
+  name: spike-poc-argo-application-2
   namespace: argocd
 spec:
   project: default
 
   source:
-    repoURL: https://github.com/parthbhope-kd/argocd-poc.git
-    targetRevision: HEAD
-    path: dev
-    # source:
-    # path: apps
-    # repoURL: https://github.com/argoproj/argocd-example-apps
+    # repoURL: https://github.com/parthbhope-kd/argocd-poc.git
     # targetRevision: HEAD
+    # path: dev
+    source:
+    path: apps
+    repoURL: https://github.com/argoproj/argocd-example-apps
+    targetRevision: HEAD
   destination: 
     server: https://kubernetes.default.svc
-    namespace: spike
+    namespace: spike-app
 
   syncPolicy:
     syncOptions:
