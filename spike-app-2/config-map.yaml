@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: game-config-2
+  namespace: spike-app-2
+data:
+  database: mongodb
+  database_uri: mongodb://localhost:27017    
