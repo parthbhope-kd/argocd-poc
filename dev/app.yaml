@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: project-1
+  name: spike-poc-argo-application
   namespace: argocd
 spec:
   project: project-1
