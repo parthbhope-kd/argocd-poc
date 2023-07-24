@@ -4,7 +4,7 @@ metadata:
   name: spike-app-2
   namespace: argocd
 spec:
-  project: spike-app-2
+  project: default
 
   source:
     repoURL: https://github.com/parthbhope-kd/argocd-poc.git
