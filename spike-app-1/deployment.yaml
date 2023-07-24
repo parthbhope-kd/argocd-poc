@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spike-app
+  name: spike-app-1
 spec:
   selector:
     matchLabels:
-      app: spike-app
+      app: spike-app-1
   replicas: 2
   template:
     metadata:
       labels:
-        app: spike-app
+        app: spike-app-1
     spec:
       containers:
-      - name: spike-app
+      - name: spike-app-1
         image: nanajanashia/argocd-app:1.1
         ports:
         - containerPort: 8080
