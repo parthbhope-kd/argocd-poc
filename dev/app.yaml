@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: spike-poc-argo-application
+  name: default
   namespace: argocd
 spec:
-  project: spike-poc-argo-application
+  project: default
 
   source:
     # repoURL: https://github.com/parthbhope-kd/argocd-poc.git
