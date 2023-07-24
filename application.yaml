@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: spike-poc-argo-application
+  name: root-app
   namespace: argocd
 spec:
   project: default
@@ -16,7 +16,7 @@ spec:
     # targetRevision: HEAD
   destination: 
     server: https://kubernetes.default.svc
-    namespace: spike
+    namespace: argocd
 
   syncPolicy:
     syncOptions:
