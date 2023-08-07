@@ -1,26 +1,26 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: root-app
-  namespace: argocd
-spec:
-  project: default
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: root-app
+#   namespace: argocd
+# spec:
+#   project: default
 
-  source:
-    repoURL: https://github.com/parthbhope-kd/argocd-poc.git
-    targetRevision: HEAD
-    path: apps
-  destination: 
-    server: https://kubernetes.default.svc
-    namespace: argocd
+#   source:
+#     repoURL: https://github.com/parthbhope-kd/argocd-poc.git
+#     targetRevision: HEAD
+#     path: apps
+#   destination: 
+#     server: https://kubernetes.default.svc
+#     namespace: argocd
 
-  syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
-    - Validate=false
-    - PrunePropagationPolicy=foreground 
-    - PruneLast=true 
+#   syncPolicy:
+#     syncOptions:
+#     - CreateNamespace=true
+#     - Validate=false
+#     - PrunePropagationPolicy=foreground 
+#     - PruneLast=true 
 
-    automated: # polls from the Git repo every 3 mins by default
-      selfHeal: true # by default changes made to the cluster manually will not trigger sync, adding selfHeal enables auto sync
-      prune: true 
+#     automated: # polls from the Git repo every 3 mins by default
+#       selfHeal: true # by default changes made to the cluster manually will not trigger sync, adding selfHeal enables auto sync
+#       prune: true 

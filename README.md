@@ -1,1 +1,1 @@
-# Argo CD POC
+# Kustomize POC
